@@ -1,3 +1,9 @@
+@import "tailwindcss";
+
+input, textarea {
+  border: 1px solid white
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

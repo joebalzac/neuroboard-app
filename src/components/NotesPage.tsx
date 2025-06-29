@@ -19,7 +19,10 @@ export const NotesPage = () => {
       <NoteList
         notes={notes}
         onDelete={deleteNote}
-        onUpdate={(updatedNote) => console.log(updatedNote)}
+        onUpdate={(updateNote) => {
+          console.log("Edit this note:", updateNote);
+          // For now: wire this up to editing flow next.
+        }}
       />
     </main>
   );
