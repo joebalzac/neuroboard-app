@@ -52,7 +52,7 @@ export const NoteForm = ({ onSubmit }: Props) => {
         />
         <textarea
           name="content"
-          placeholder="Write your note here..."
+          placeholder="Write your note here...."
           value={form.content}
           onChange={handleChange}
         />
