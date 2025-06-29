@@ -1,14 +1,31 @@
-// ProductCard.tsx
-import type { Product } from "../types/product";
+import type { Product } from "../types/product"
 
-type Props = { product: Product };
+type Props = {
+  product: Product
+}
 
-export const ProductCard = ({ product }: Props) => {
+
+
+export const ProductCard = ({product}: Props) => {
+
+  const imageUrl = product.thumbnail || product.images[0] || ""
+
+  
+
   return (
-    <div>
-      <h3>{product.title}</h3>
-      <p>{product.description}</p>
-      <strong>${product.price}</strong>
+    <div key={product.id}>
+      <h3>
+        {product.title}
+      </h3>
+      <p>
+        {product.description}
+      </p>
+      <p>• ⭐{product.rating}</p>
+
+      {imageUrl && (
+        <img key={product.id} src={imageUrl} alt={product.title} className="" />
+      )}
+      
     </div>
-  );
-};
+  )
+}
