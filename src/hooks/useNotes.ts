@@ -11,7 +11,7 @@ export const useNotes = () => {
       setNotes(data);
       setLoading(false);
     });
-  });
+  }, []);
 
   const createNote = async (input: CreateNoteInput) => {
     const newNote = await notesApi.createNote(input);

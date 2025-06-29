@@ -41,8 +41,8 @@ export const NoteForm = ({ onSubmit }: Props) => {
   };
 
   return (
-    <div>
-      <form action="" onSubmit={() => handleSubmit}>
+    <div className="flex">
+      <form className="" action="" onSubmit={handleSubmit}>
         <input
           type="text"
           name="title"
